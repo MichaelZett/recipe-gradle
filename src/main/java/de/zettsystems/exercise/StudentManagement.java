@@ -1,9 +1,7 @@
 package de.zettsystems.exercise;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -38,19 +36,15 @@ public class StudentManagement {
     }
 
     private static List<Student> getAllFemales(List<Student> x) {
-        List<Student> collect = x.stream()
-                .peek(System.out::println)
+        return x.stream()
                 .filter(s -> s.getGender() == Gender.FEMALE)
                 .collect(Collectors.toList());
-        return collect;
     }
 
     private static List<Student> getAllAdults(List<Student> x) {
-        List<Student> collect = x.stream()
-                .peek(System.out::println)
+        return x.stream()
                 .filter(s -> s.getAge() >= 18)
                 .collect(Collectors.toUnmodifiableList());
-        return collect;
     }
 
     private static void instanceOfImprovable(List<Student> x) {

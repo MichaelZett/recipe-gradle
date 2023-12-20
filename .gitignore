@@ -8,3 +8,5 @@ out/
 # Maven
 log/
 target/
+
+.gradle
